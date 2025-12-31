@@ -14,7 +14,7 @@ function App() {
     fetch("https://remotive.com/api/remote-jobs")
       .then((res) => res.json())
       .then((data) => {
-        setJobs(data.jobs || []);
+        setJobs(data?.jobs || []);
         setLoading(false);
       })
       .catch(() => setLoading(false));
@@ -40,18 +40,14 @@ function App() {
   }
 
   const filteredJobs = jobs.filter((job) => {
-    const matchSearch = job.title
-      .toLowerCase()
-      .includes(search.toLowerCase());
+    const title = job?.title?.toLowerCase() || "";
+    const location = job?.candidate_required_location?.toLowerCase() || "";
+    const type = job?.job_type || "";
 
-    const matchType =
-      typeFilter === "all" || job.job_type === typeFilter;
-
+    const matchSearch = title.includes(search.toLowerCase());
+    const matchType = typeFilter === "all" || type === typeFilter;
     const matchLocation =
-      locationFilter === "all" ||
-      job.candidate_required_location
-        .toLowerCase()
-        .includes(locationFilter.toLowerCase());
+      locationFilter === "all" || location.includes(locationFilter);
 
     return matchSearch && matchType && matchLocation;
   });
@@ -77,7 +73,6 @@ function App() {
         >
           <option value="all">All Types</option>
           <option value="full_time">Full Time</option>
-          <option value="part_time">Part Time</option>
           <option value="contract">Contract</option>
           <option value="freelance">Freelance</option>
         </select>
@@ -108,16 +103,9 @@ function App() {
               <div className="job-card" key={job.id}>
                 <h3>{job.title}</h3>
 
-                <p>
-                  <strong>Company:</strong> {job.company_name || "N/A"}
-                </p>
-                <p>
-                  <strong>Location:</strong>{" "}
-                  {job.candidate_required_location || "N/A"}
-                </p>
-                <p>
-                  <strong>Type:</strong> {job.job_type || "N/A"}
-                </p>
+                <p><strong>Company:</strong> {job.company_name || "N/A"}</p>
+                <p><strong>Location:</strong> {job.candidate_required_location || "N/A"}</p>
+                <p><strong>Type:</strong> {job.job_type || "N/A"}</p>
 
                 <div className="actions">
                   <a
@@ -154,13 +142,8 @@ function App() {
           <div className="job-card saved" key={job.id}>
             <h3>{job.title}</h3>
 
-            <p>
-              <strong>Company:</strong> {job.company_name}
-            </p>
-            <p>
-              <strong>Location:</strong>{" "}
-              {job.candidate_required_location}
-            </p>
+            <p><strong>Company:</strong> {job.company_name}</p>
+            <p><strong>Location:</strong> {job.candidate_required_location}</p>
 
             <div className="actions">
               <a
