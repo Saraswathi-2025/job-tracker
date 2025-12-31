@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/job-tracker/',   // 🔴 THIS LINE FIXES EVERYTHING
+  base: '/job-tracker/',
 })
