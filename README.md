@@ -90,8 +90,8 @@ http://localhost:5173
 ---
 
 ## Author
-- Saraswathi
-- Frontend Developer (Learning Phase)
+- Saraswathi ,
+Frontend Developer (Learning Phase)
 
 ---
 
