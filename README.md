@@ -62,6 +62,8 @@ npm run dev
 Open in browser:
 http://localhost:5173
 
+---
+
 ##Build
 npm run build
 This creates an optimized production build.
