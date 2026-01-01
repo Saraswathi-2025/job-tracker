@@ -62,18 +62,18 @@ npm run dev
 Open in browser:
 http://localhost:5173
 
-Build
+##Build
 npm run build
 This creates an optimized production build.
 The output files will be generated inside the dist/ folder.
 
-Deployment (GitHub Pages)
+##Deployment (GitHub Pages)
 npm run deploy
 This project is deployed using GitHub Pages.
 Vite configuration uses:
 base: "/job-tracker/"
 
-Notes
+##Notes
 - Saved jobs are stored in browser localStorage
 - No backend is used
 - Frontend-only project
