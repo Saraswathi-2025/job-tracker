@@ -66,18 +66,18 @@ http://localhost:5173
 
 ## Build
 
-npm run build
-This creates an optimized production build.
-The output files will be generated inside the dist/ folder.
+- npm run build
+- This creates an optimized production build.
+- The output files will be generated inside the dist/ folder.
 
 ---
 
 ## Deployment (GitHub Pages)
 
-npm run deploy
-This project is deployed using GitHub Pages.
-Vite configuration uses:
-base: "/job-tracker/"
+- npm run deploy
+- This project is deployed using GitHub Pages.
+- Vite configuration uses:
+- base: "/job-tracker/"
 
 ---
 
@@ -90,10 +90,10 @@ base: "/job-tracker/"
 ---
 
 ## Author
-Saraswathi
-Frontend Developer (Learning Phase)
+- Saraswathi
+- Frontend Developer (Learning Phase)
 
 ---
 
 License
-This project is for learning and personal portfolio use.
+- This project is for learning and personal portfolio use.
