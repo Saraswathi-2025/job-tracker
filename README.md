@@ -31,7 +31,17 @@ A simple job tracking web application built with *React + Vite* that fetches rea
 
 ## 📁 Project Structure
 
-job-tracker/ │ ├── public/ ├── src/ │   ├── App.jsx │   ├── App.css │   ├── main.jsx │   └── index.css │ ├── index.html ├── vite.config.js ├── package.json └── README.md
+job-tracker/ │
+             ├── public/ 
+             ├── src/
+             │   ├── App.jsx
+             │   ├── App.css
+             │   ├── main.jsx
+             │   └── index.css
+             │ ├── index.html
+             ├── vite.config.js
+             ├── package.json
+             └── README.md
 
 ---
 
@@ -54,24 +64,19 @@ http://localhost:5173
 
 
 Build
-
 npm run build
-
 This creates an optimized production build.
 The output files will be generated inside the dist/ folder.
 
 
 Deployment (GitHub Pages)
-
 npm run deploy
-
 This project is deployed using GitHub Pages.
 Vite configuration uses:
 base: "/job-tracker/"
 
 
 Notes
-
 - Saved jobs are stored in browser localStorage
 - No backend is used
 - Frontend-only project
@@ -79,11 +84,9 @@ Notes
 
 
 Author
-
 Saraswathi
 Frontend Developer (Learning Phase)
 
 
 License
-
 This project is for learning and personal portfolio use.
